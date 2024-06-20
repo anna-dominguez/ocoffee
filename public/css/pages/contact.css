@@ -1,0 +1,48 @@
+main {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1500px;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    section {
+      display: flex;
+      gap: 20px;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+
+      input,
+      textarea {
+        padding: 10px;
+        font-family: "Poppins";
+        border-radius: 5px;
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    form {
+      section {
+        flex-direction: column;
+      }
+    }
+  }
+}

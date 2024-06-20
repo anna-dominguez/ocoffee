@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Anna Dominguez">
+  <meta name="publisher" content="O'Clock">
+  <meta name="description" content="">
+  <meta name="keywords" contextmenu="O'Clock coffee ocoffee">
+  <title>oCoffee</title>
+  <link rel="stylesheet" href="../public/css/base/topology.css">
+  <link rel="stylesheet" href="../public/css/base/variables.css">
+  <link rel="stylesheet" href="../public/css/base/base.css">
+  <link rel="stylesheet" href="../public/css/components/header.css">
+  <link rel="stylesheet" href="../public/css/pages/home.css">
+  <link rel="stylesheet" href="../public/css/components/coffee-card.css">
+  <link rel="stylesheet" href="../public/css/components/button.css">
+  <script defer src="../js/header.js"></script>
+  <script defer src="../js/slider.js"></script>
+</head>
+
+<body>
+  <header>
+    <section>
+      <img src="../public/images/logo.svg" alt="oCoffee">
+      <h1>oCoffee</h1>
+    </section>
+    <nav>
+      <div id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <ul id="nav">
+        <li><a href="./home.html">Accueil</a></li>
+        <li><a href="./catalog.html">Catalogue</a></li>
+        <li><a href="./about.html">A propos</a></li>
+        <li><a href="#">Panier</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <article>
+        <h2>Bienvenue sur oCoffee,<br>découvrez notre <em>café d'exception</em></h2>
+        <p>Jean et Jacques Pepper, deux frères passionnés par le café, sont les fondateurs de notre boutique. Avec une
+          expertise approfondie et un amour profond pour cette délicieuse boisson, ils ont créé un espace où le café est
+          célébré comme une expérience raffinée et inspirante.</p>
+        <a href="./catalogue.html"><button>Voir le catalogue</button></a>
+      </article>
+      <article>
+        <img src="../public/images/about.jpg" alt="Café en grains">
+      </article>
+    </section>
+
+    <section id="news">
+      <h2>Nouvautés</h2>
+      <div class="news-content slideshow-container">
+        <article class="coffee mySlides fade">
+          <img src="../public/images/coffees/295432730.png" alt="Café en grains">
+          <div class="coffee__details">
+            <h3>Café Kenyan AA</h3>
+            <p>Café complexe connu pour son acidité rappelant le vin et ses saveurs fruitées.</p>
+            <a href="./product.html"><button>Découvrir</button></a>
+          </div>
+        </article>
+        <article class="coffee mySlides fade">
+          <img src="../public/images/coffees/549549090.png" alt="">
+          <div class="coffee__details">
+            <h3>Café Vietnamese Robusta</h3>
+            <p>Café audacieux et fort avec une saveur robuste distinctive.</p>
+            <a href="./product.html"><button>Découvrir</button></a>
+          </div>
+        </article>
+        <article class="coffee mySlides fade">
+          <img src="../public/images/coffees/650753915.png" alt="Café en grains">
+          <div class="coffee__details">
+            <h3>Café Rwandan Bourbon</h3>
+            <p>Café avec des notes florales prononcées, une acidité vive et un corps moyen.</p>
+            <a href="./product.html"><button>Découvrir</button></a>
+          </div>
+        </article>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>

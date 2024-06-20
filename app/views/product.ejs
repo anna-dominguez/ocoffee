@@ -1,0 +1,35 @@
+<%- include('./partials/header.ejs') %>
+<main>
+  <section id="hero">
+    <img src="/images/product.webp" alt="Tasse de café" />
+  </section>
+  <section id="coffee">
+    <img
+      src="/images/coffees/<%= coffee.reference %>.png"
+      alt="Café en grains"
+    />
+    <div class="coffee__details">
+      <p class="detail__publication">
+        Publié le <%= coffee.created_at.getDate() %>/<%=
+        coffee.created_at.getMonth() + 1 %>/<%= coffee.created_at.getFullYear()
+        %>
+      </p>
+      <h2><%= coffee.name %></h2>
+      <p><%= coffee.description %></p>
+      <p><strong>Origine</strong>: <%= coffee.origin %></p>
+      <p>
+        <strong>Caractéristique principale</strong>: <%= coffee.characteristic
+        %>
+      </p>
+      <p><strong>Prix</strong>: <%= coffee.price %> €</p>
+      <p
+        class="detail__<%= coffee.availability ? 'available' : 'not-available' %>"
+      >
+        <%= coffee.availability ? "Disponible" : "En rupture" %>
+      </p>
+      <a href="/catalog"><button>Catalogue</button></a>
+    </div>
+  </section>
+</main>
+
+<%- include('./partials/footer.ejs') %>

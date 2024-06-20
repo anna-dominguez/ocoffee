@@ -1,0 +1,52 @@
+<%- include('./partials/header.ejs') %>
+
+<main>
+  <h2>Vous voulez nous contacter ?</h2>
+  <form method="POST" action="/contact">
+    <section>
+      <article>
+        <label for="firstName">Prenom</label>
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          placeholder="John"
+          required
+        />
+      </article>
+      <article>
+        <label for="lastName">Nom</label>
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          placeholder="Doe"
+          required
+        />
+      </article>
+    </section>
+    <article>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="monemail@gmail.com"
+        required
+      />
+    </article>
+    <article>
+      <label for="message">Message</label>
+      <textarea
+        name="message"
+        id="message"
+        placeholder="Ton message"
+        rows="10"
+        required
+      ></textarea>
+    </article>
+    <button>Envoyer</button>
+  </form>
+</main>
+
+<%- include('./partials/footer.ejs') %>

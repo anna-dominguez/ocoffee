@@ -1,0 +1,42 @@
+<%- include('./partials/header.ejs') %>
+<main>
+  <section id="hero">
+    <article>
+      <h2>
+        Bienvenue sur oCoffee,<br />découvrez notre <em>café d'exception</em>
+      </h2>
+      <p>
+        Jean et Jacques Pepper, deux frères passionnés par le café, sont les
+        fondateurs de notre boutique. Avec une expertise approfondie et un amour
+        profond pour cette délicieuse boisson, ils ont créé un espace où le café
+        est célébré comme une expérience raffinée et inspirante.
+      </p>
+      <a href="./catalog"><button>Voir le catalogue</button></a>
+    </article>
+    <article>
+      <img src="/images/about.jpg" alt="Café en grains" />
+    </article>
+  </section>
+
+  <section id="news">
+    <h2>Nouvautés</h2>
+    <div class="news-content slideshow-container">
+      <% newCoffees.forEach(coffee => { %>
+      <article class="coffee mySlides">
+        <img
+          src="/images/coffees/<%= coffee.reference %>.png"
+          alt="Café en grains"
+        />
+        <div class="coffee__details">
+          <h3><%= coffee.name %></h3>
+          <p><%= coffee.description %></p>
+          <a href="/product/<%= coffee.id %>"><button>Découvrir</button></a>
+        </div>
+      </article>
+      <% }) %>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </section>
+</main>
+<%- include('./partials/footer.ejs') %>

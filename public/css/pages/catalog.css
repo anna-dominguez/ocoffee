@@ -1,0 +1,62 @@
+main {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1500px;
+
+  #hero {
+    background: url("../../images/about.jpg") center/cover no-repeat;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+
+    h2 {
+      color: #fff;
+    }
+  }
+
+  #coffees {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    form {
+      align-self: end;
+    }
+
+    select {
+      padding: 10px;
+      background-color: var(--subtitles);
+      color: #fff;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      width: fit-content;
+    }
+
+    .coffee-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    #coffees {
+      .coffee-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

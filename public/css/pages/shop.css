@@ -1,0 +1,12 @@
+main {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1500px;
+
+  #map {
+    height: 400px;
+    border-radius: 5px;
+  }
+}
